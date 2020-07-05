@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.hackathon">
+
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@drawable/icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".CovidLaboratories" />
+        <activity android:name=".PublicHealthLocations" />
+        <activity android:name=".PassAuthority" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/API_KEY" />
+
+        <activity android:name=".ChStats" />
+        <activity android:name=".HospitalRegistration" />
+        <activity
+            android:name=".PassQandA"
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
+        <activity
+            android:name=".MovingTicket"
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
+        <activity android:name=".Doctor" />
+        <activity
+            android:name=".Consultation"
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
+        <activity
+            android:name=".Appointment"
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
+        <activity
+            android:name=".OTP"
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
+        <activity android:name=".WebViewActivity" />
+        <activity android:name=".ForgotPasword" />
+        <activity
+            android:name=".NavnBottom"
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/Theme.Design.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".DoctorSignUp" />
+        <activity
+            android:name=".Statistics"
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
+        <activity android:name=".SignUp" />
+        <activity
+            android:name=".Card"
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
+        <activity
+            android:name=".Login"
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
+        <activity android:name=".LabSignUp" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <service android:name=".FMS">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+
+        <activity android:name=".volunteer.SearchParticpateEvent"></activity>
+        <activity android:name=".volunteer.ParticipantAssignedWork" />
+        <activity android:name=".volunteer.ParticipantInsideEvent" />
+        <activity android:name=".volunteer.EventMembers" />
+<!--        <activity-->
+<!--            android:name=".volunteer.ui.home.HomeFragment"-->
+<!--            android:theme="@style/Theme.Design.NoActionBar" />-->
+<!--        <activity-->
+<!--            android:name=".volunteer.ui.home.MyEvents"-->
+<!--            android:theme="@style/Theme.Design.NoActionBar" />-->
+<!--        <activity android:name=".volunteer.ui.home.home.main.Created" />-->
+<!--        <activity android:name=".volunteer.ui.home.home.main.Participated" />-->
+        <activity android:name=".volunteer.EditProfile" />
+        <activity android:name=".volunteer.AssignWork" />
+        
+        <activity android:name=".volunteer.PostEvent" />
+        <activity
+            android:name=".volunteer.NewAccount"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".volunteer.Participants" />
+        <activity android:name=".volunteer.ForgetPassword" />
+        <activity
+            android:name=".volunteer.LoginActivity"
+            android:label="Login"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".volunteer.AdminInsideEvent"
+            android:theme="@style/Theme.Design.NoActionBar" />
+
+
+    </application>
+
+</manifest>

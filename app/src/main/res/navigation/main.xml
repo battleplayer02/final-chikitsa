@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    app:startDestination="@id/home2">
+
+    <fragment
+        android:id="@+id/home2"
+        android:name="com.example.hackathon.Home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/feedBack"
+        android:name="com.example.hackathon.FeedBack"
+        android:label="fragment_feed_back"
+        tools:layout="@layout/fragment_feed_back" />
+
+    <fragment
+        android:id="@+id/list_Of_Doctors"
+        android:name="com.example.hackathon.ListOfDoctors"
+        android:label="fragment_list__of__doctors"
+        tools:layout="@layout/fragment_list__of__doctors" />
+
+    <fragment
+        android:id="@+id/list_of_Hospitals"
+        android:name="com.example.hackathon.List_of_Hospitals"
+        android:label="fragment_list_of__hospitals"
+        tools:layout="@layout/fragment_list_of__hospitals" />
+
+    <fragment
+        android:id="@+id/myBookings"
+        android:name="com.example.hackathon.MyBookings"
+        android:label="fragment_my_bookings"
+        tools:layout="@layout/fragment_my_bookings" />
+
+    <fragment
+        android:id="@+id/profile"
+        android:name="com.example.hackathon.Profile"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/search"
+        android:name="com.example.hackathon.Search"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
+
+    <fragment
+        android:id="@+id/logout"
+        android:name="com.example.hackathon.Logout"
+        android:label="fragment_logout"
+        tools:layout="@layout/fragment_logout" />
+
+    <fragment
+        android:id="@+id/funds"
+        android:name="com.example.hackathon.Funds"
+        android:label="fragment_funds"
+        tools:layout="@layout/fragment_funds" />
+
+    <fragment
+        android:id="@+id/tollFree"
+        android:name="com.example.hackathon.TollFree"
+        android:label="fragment_toll_free"
+        tools:layout="@layout/fragment_toll_free" />
+
+    <fragment
+        android:id="@+id/medicalStores"
+        android:name="com.example.hackathon.MedicalStores"
+        android:label="fragment_medical_stores"
+        tools:layout="@layout/fragment_medical_stores" />
+    <fragment
+        android:id="@+id/videotraining"
+        android:name="com.example.hackathon.Motivational_videos"
+        android:label="fragment_motivational_videos"
+        tools:layout="@layout/fragment_motivational_videos" />
+    <fragment
+        android:id="@+id/products"
+        android:name="com.example.hackathon.Products"
+        android:label="fragment_products"
+        tools:layout="@layout/fragment_products" />
+    <fragment
+        android:id="@+id/labs"
+        android:name="com.example.hackathon.Labs"
+        android:label="fragment_labs"
+        tools:layout="@layout/fragment_labs" />
+</navigation>

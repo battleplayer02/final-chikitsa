@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+    <item
+        android:id="@+id/profile"
+        android:title="Profile"
+        android:icon="@drawable/profile_ic"/>
+
+    <item
+        android:id="@+id/myBookings"
+        android:title="My Bookings"
+        android:icon="@drawable/my_bookings_ic"/>
+
+    <item
+        android:id="@+id/feedBack"
+        android:title="Feedback"
+        android:icon="@drawable/fed"/>
+    </group>
+
+
+    <item android:title="Medical Staf">
+        <menu>
+            <item
+                android:id="@+id/list_of_Hospitals"
+                android:title="List of Hospitals"
+                android:icon="@drawable/list_of_hospitals_ic"/>
+            <item
+                android:id="@+id/list_Of_Doctors"
+                android:title="List Of Doctors"
+                android:icon="@drawable/lod1"/>
+        </menu>
+    </item>
+
+    <item android:title="More">
+        <menu>
+            <item
+                android:id="@+id/funds"
+                android:title="Funds"
+                android:icon="@drawable/funds"/>
+            <item
+                android:id="@+id/tollFree"
+                android:title="Toll Free"
+                android:icon="@drawable/phone12"/>
+            <item
+            android:id="@+id/medicalStores"
+            android:title="Medical Stores"
+            android:icon="@drawable/pharmect"/>
+
+            <item
+                android:id="@+id/products"
+                android:title="Products"
+                android:icon="@drawable/products"/>
+            <item
+                android:id="@+id/videotraining"
+                android:title="Vocational Training"
+                android:icon="@drawable/list_of_doctors"/>
+        </menu>
+    </item>
+
+    <item android:title="Logout">
+        <menu>
+            <item
+                android:id="@+id/logout"
+                android:title="Logout"
+                android:icon="@drawable/lock"/>
+        </menu>
+    </item>
+</menu>

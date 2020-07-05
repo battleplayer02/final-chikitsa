@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_marginBottom="7dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/membercard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        card_view:cardMaxElevation="1dp"
+        card_view:cardElevation="1dp"
+        android:paddingBottom="7dp">
+        <LinearLayout
+            android:background="#cccccc"
+            android:weightSum="1"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+<!--                <View-->
+<!--                    android:layout_weight="0.01"-->
+<!--                    android:background="#68BCFF"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_width="0dp" />-->
+                <TextView
+                    android:textAllCaps="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:textColor="@android:color/black"
+                    android:id="@+id/textMember"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:textSize="10sp"
+                    android:text="teacher"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/showassign"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Show Work"
+                     />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

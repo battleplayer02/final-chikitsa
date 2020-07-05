@@ -1,0 +1,169 @@
+package com.example.hackathon;
+
+import android.os.Bundle;
+
+import androidx.appcompat.widget.SearchView;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+public class MedicalStores extends Fragment {
+
+    RecyclerView recyclerView;
+    SearchView textsearch;
+    ArrayList<StorePojo> homePojoArrayList = new ArrayList<>();
+
+    public MedicalStores() {
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        View root = inflater.inflate(R.layout.fragment_medical_stores, container, false);
+
+        recyclerView = root.findViewById(R.id.recentSearch);
+        textsearch = root.findViewById(R.id.textSearch);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        searchAll();
+        textsearch.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                Regist(s);
+                return true;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String s) {
+                Regist(s);
+                return true;
+            }
+        });
+
+        return root;
+    }
+
+    private void searchAll() {
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, "https://fullstackers.000webhostapp.com/PatientAppointment/search.php",
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        try {
+                            //converting the string to json array object
+                            System.out.println(response + "response");
+                            JSONArray array = new JSONArray(response);
+                            //traversing through all the object
+                            JSONObject w = array.getJSONObject(0);
+
+                            if (!w.getString("success").equals("0")) {
+                                if (homePojoArrayList.size() > 0) {
+                                    homePojoArrayList.clear();
+                                }
+                                for (int i = 0; i < array.length(); i++) {
+                                    JSONObject word = array.getJSONObject(i);
+                                    StorePojo showBlackboard = new StorePojo();
+                                    showBlackboard.setName(word.optString("name"));
+                                    showBlackboard.setAddress(word.optString("address"));
+                                    homePojoArrayList.add(showBlackboard);
+                                }
+                                //creating adapter object and setting it to recyclerview
+                                StoreAdapter adapter = new StoreAdapter(getContext(), homePojoArrayList);
+                                recyclerView.setAdapter(adapter);
+                                //shimmerFrameLayout.setVisibility(View.INVISIBLE);
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+
+                    }
+                }) {
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> params = new HashMap<>();
+                return params;
+            }
+        };
+        Volley.newRequestQueue(getContext()).add(stringRequest);
+    }
+
+    public void Regist(final String s) {
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, "https://fullstackers.000webhostapp.com/PatientAppointment/searchevent.php",
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        try {
+                            //converting the string to json array object
+                            System.out.println(response + "response");
+                            JSONArray array = new JSONArray(response);
+                            //traversing through all the object
+                            JSONObject w = array.getJSONObject(0);
+
+                            if (!w.getString("success").equals("0")) {
+                                if (homePojoArrayList.size() > 0) {
+                                    homePojoArrayList.clear();
+                                }
+                                for (int i = 0; i < array.length(); i++) {
+                                    JSONObject word = array.getJSONObject(i);
+                                    StorePojo showBlackboard = new StorePojo();
+                                    showBlackboard.setName(word.optString("name"));
+                                    showBlackboard.setAddress(word.optString("address"));
+                                    homePojoArrayList.add(showBlackboard);
+                                }
+                                //creating adapter object and setting it to recyclerview
+                                StoreAdapter adapter = new StoreAdapter(getContext(), homePojoArrayList);
+                                recyclerView.setAdapter(adapter);
+                                //shimmerFrameLayout.setVisibility(View.INVISIBLE);
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+
+                    }
+                }) {
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> params = new HashMap<>();
+                params.put("s", s);
+//            params.put("id",new LoginManager(getActivity()).getUserDetails().get(LoginManager.KEY_ID));
+
+                return params;
+            }
+        };
+        Volley.newRequestQueue(getContext()).add(stringRequest);
+
+    }
+}

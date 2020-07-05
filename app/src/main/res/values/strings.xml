@@ -1,0 +1,123 @@
+<resources>
+    <string name="app_name">Chikitsa</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="type">
+        <item>Type 1 (Inside Zone)</item>
+        <item>Type 2 (One Zone To Another)</item>
+        <item>Type 3 (State to State)</item>
+    </string-array>
+    <string name="header_title">Chikitsa Made By Vaishnavi Gaurav and Himanshu</string>
+    <string name="logo_desc">Logo</string>
+    <string name="positive">Positive</string>
+    <string name="cases">cases</string>
+    <string name="dead">Death</string>
+    <string name="current_info">Current Information about COVID-19 in \nChhattisgarh</string>
+    <string name="negative">Negative</string>
+    <string name="cured">Cured</string>
+    <string name="under_treatment">Under Treatment</string>
+    <string name="comparison_death_helper">*) Comparison of Death and Cured patient.</string>
+    <string name="data_unavailable">Data unavailable!</string>
+    <string name="day">Day-</string>
+    <string name="data_stats_helper">*) Trend COVID19 %1$s patient daily. Data from BNPB Indonesia.</string>
+    <string name="failed_to_get_data">Failed to fetch data!</string>
+
+    <string name="placeholder_desc">Click here to see the hospitals around you appointed by the government to handle COVID-19 patients.</string>
+    <string name="placeholder_self_screening">Click here to do a self screening and getting more information about COVID-19.</string>
+    <string name="placeholder_stats">Click here to see the statistical data dissemination about COVID-19 in Indonesia.</string>
+    <string name="placeholder_maps">Click here to see a map of the spread of COVID-19 in Indonesia.</string>
+    <string name="placeholder_task_force">Click here to see COVID-19 task force team by district.</string>
+    <string name="placeholder_qna">Click here to give feedback to the developers.</string>
+
+
+    <string name="last_update">Latest Update :</string>
+    <string name="creator">Made with ❤ BanuaCoders.com</string>
+    <string name="pdp_label">Patient in Supervision (PDP)</string>
+    <string name="odp_label">Person in Observation (ODP)</string>
+
+    <string name="hospital_corona">COVID-19 REFERRAL HOSPITAL</string>
+    <string name="self_screening_corona">SELF SCREENING COVID-19</string>
+    <string name="statistics_corona">COVID-19 STATISTICS </string>
+    <string name="maps_corona">COVID-19 SPREAD MAP</string>
+    <string name="posts_task_force">COVID-19 TASK FORCE</string>
+    <string name="qna">Give us Feedback</string>
+
+    <string name="finished_odp_label">Completed Observation</string>
+    <string name="total_odp">Total ODP</string>
+    <string name="zero_percent">(0%)</string>
+    <string name="zero_value">0</string>
+    <string name="under_observation">Under Observation</string>
+    <string name="total_pdp">Total PDP</string>
+    <string name="finished_supervision">Completed Supervision</string>
+    <string name="under_supervision">Under Supervision</string>
+    <string name="national_data_recap">National Data Recapitulation</string>
+    <string name="total_death_national">Total Death :</string>
+    <string name="total_positive_national">Total Positive :</string>
+    <string name="total_cured_national">Total Cured :</string>
+    <string name="table_title">Cases of COVID-19 based on City</string>
+    <string name="important_number">Important Number:</string>
+    <string name="call_center" translatable="false">Call Center</string>
+    <string name="emergency_number">Emergency Number</string>
+    <string name="emergency_number_value" translatable="false">108</string>
+    <string name="pho_central_sulawesi">General Question </string>
+    <string name="general_question">General Questions</string>
+    <string name="pho_number">011-23978046</string>
+    <string name="helper_phone">*) Press card to call</string>
+    <string name="hospital_desc">Here is a list of COVID-19 referral hospitals in Central Sulawesi. Please tap on the telephone number to call or tap on the email to send an email.</string>
+    <string name="comparison_death_and_cured_label">Comparison of Cured and Death Patient caused by COVID-19</string>
+    <string name="total_cured">Total Cured</string>
+    <string name="graph_cured_label">National COVID-19 Cured Patient Chart</string>
+    <string name="total_positive">Total Positive</string>
+    <string name="graph_positive_label">National COVID-19 Positive Patient Chart.</string>
+    <string name="total_death">Total Death</string>
+    <string name="graph_death_label">National COVID-19 Death Patient Chart</string>
+    <string name="list_hospital_label">List of Hospitals</string>
+    <string name="direction">Directions</string>
+    <string name="data_source_placeholder">*) Data source : https://bnpb-inacovid19.hub.arcgis.com/</string>
+    <string name="odp">ODP</string>
+    <string name="pdp">PDP</string>
+    <string name="spread_maps">Spread Map</string>
+    <string name="district">District/City</string>
+    <string name="completed_odp">Completed ODP</string>
+    <string name="in_odp">In ODP</string>
+    <string name="completed_pdp">Completed PDP</string>
+    <string name="in_pdp">In PDP</string>
+    <string name="API_KEY" translatable="false">AIzaSyApzSN6SD_HFmbK9b7VN3kHbuNz9kjrIj8</string>
+    <string name="province_covid_task_force">COVID-19 Task Force for Central Sulawesi</string>
+    <string name="hotline" translatable="false">Hotline</string>
+    <string name="province_task_force_number" translatable="false">082399464837</string>
+
+
+    <array name="array_icon_menu">
+        <item>hospital</item>
+        <item>posts</item>
+        <item>detexi</item>
+        <item>statistics</item>
+        <item>maps</item>
+        <item>qna</item>
+    </array>
+
+    <array name="array_title_menu">
+        <item>@string/hospital_corona</item>
+        <item>@string/posts_task_force</item>
+        <item>@string/self_screening_corona</item>
+        <item>@string/statistics_corona</item>
+        <item>@string/maps_corona</item>
+        <item>@string/qna</item>
+    </array>
+
+    <array name="array_desc_menu">
+        <item>@string/placeholder_desc</item>
+        <item>@string/placeholder_task_force</item>
+        <item>@string/placeholder_self_screening</item>
+        <item>@string/placeholder_stats</item>
+        <item>@string/placeholder_maps</item>
+        <item>@string/placeholder_qna</item>
+    </array>
+
+    <string name="tab_text_1">Participated</string>
+    <string name="tab_text_2">Created</string>
+
+
+</resources>

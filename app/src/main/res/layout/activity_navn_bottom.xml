@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer"
+    style="@style/AppTheme"
+    android:background="#ffffff"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.shrikanthravi.customnavigationdrawer2.widget.SNavigationDrawer
+        android:id="@+id/navigationdrawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:HamMenuIconTintColor="@color/white"
+        app:appbarColor="#2B2B52"
+        app:appbarTitleTextColor="@color/white">
+
+        <FrameLayout
+            android:layout_marginBottom="72dp"
+            android:id="@+id/framelayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.shrikanthravi.customnavigationdrawer2.widget.SNavigationDrawer>
+
+    <com.ismaeldivita.chipnavigation.ChipNavigationBar
+        android:id="@+id/chipbar"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/btbg"
+        android:elevation="16dp"
+        android:padding="8dp"
+        app:cnb_menuResource="@menu/main">
+
+    </com.ismaeldivita.chipnavigation.ChipNavigationBar>
+
+
+</RelativeLayout>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "877959550787",
+    "firebase_url": "https://chikitsa-30d63.firebaseio.com",
+    "project_id": "chikitsa-30d63",
+    "storage_bucket": "chikitsa-30d63.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:877959550787:android:138272c1f32905550101f6",
+        "android_client_info": {
+          "package_name": "com.example.hackathon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "877959550787-d43mfshqj88j56ggspqab5fv454v0lg1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCG19SkALaW-VyCTOhTWTsKzi5eU0wzoY0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "877959550787-d43mfshqj88j56ggspqab5fv454v0lg1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

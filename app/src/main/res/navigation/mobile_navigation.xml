@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:label="My Events"
+        android:name="com.example.hackathon.volunteer.ui.home.EventsFragment"
+        tools:layout="@layout/fragment_home_vol" />
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.example.hackathon.volunteer.ui.dashboard.DashboardFragment"
+        android:label="Search Work"
+        tools:layout="@layout/fragment_dashboard" />
+    <fragment
+        android:id="@+id/navigation_helpline"
+        android:name="com.example.hackathon.volunteer.ui.helpline.HelplineFragment"
+        android:label="Corona Helpline"
+        tools:layout="@layout/fragment_helpline" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.hackathon.volunteer.ui.profile.ProfileFragmentVol"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile_vol" />
+</navigation>
